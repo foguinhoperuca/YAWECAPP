@@ -1,0 +1,49 @@
+{
+	"name": "YAWECAPP",
+	"description": "Yet Antoher WEb Client APP.",
+	"version": "0.0.1",
+	"url": "http://yawecapp.awknet.org",
+	"developer": {
+		"name": "Jefferson Campos",
+		"email": "foguinho.peruca@gmail.com"
+	},
+	"contributors": [
+	    "contributor": {
+		"name": "Victor Bastos"
+	    },
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/foguinhoperuca/YAWECAPP"
+	},
+	"bugs": {
+		"url": "https://github.com/foguinhoperuca/YAWECAPP/issues"
+	},
+	"dependencies": {
+	    "dependence": {
+		"name": "jquery",
+		"version": "2.0.0",
+		"url": "http://jquery.org/"
+	    },
+	    "dependence": {
+		"name": "underscore",
+		"version": "1.4.4",
+		"url": "http://underscorejs.org/"
+	    },
+	    "dependence": {
+		"name": "backbone.js",
+		"version": "1.0.0",
+		"url": "http://backbonejs.org/"
+	    },
+	    "dependence": {
+		"name": "bootstrap",
+		"version": "2.3.1",
+		"url": "http://twitter.github.com/bootstrap"
+	    },
+	    "dependence": {
+		"name": "markup",
+		"version": "1.0.0",
+		"url": "https://github.com/adammark/Markup.js/"
+	    }
+	}
+}

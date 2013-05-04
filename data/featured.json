@@ -1,0 +1,37 @@
+{
+    "featured":
+    {
+	"title": "Confira os destaques na Gijoka Doces:",
+	"productFeatured":
+	{
+	    "id": "1",
+	    "name": "Camafeu de Nozes",
+	    "description": "Description 01.",
+	    "category": "featured",
+	    "price": "<a href='mailto:geovana@gijokadoces.com.br'>Peça já o seu!</a>"
+	},
+	"products": [
+	    {
+		"id": "2",
+		"name": "Camafeu de Morango",
+		"description": "Description 02.",
+		"category": "featured",
+		"price": "<a href='mailto:geovana@gijokadoces.com.br'>Peça já o seu!</a>"
+	    },
+	    {
+		"id": "3",
+		"name": "Tortinha Holandesa",
+		"description": "Description 03.",
+		"category": "featured",
+		"price": "<a href='mailto:geovana@gijokadoces.com.br'>Peça já o seu!</a>"
+	    },
+	    {
+		"id": "4",
+		"name": "Mousse de Limão",
+		"description": "Description 04.",
+		"category": "featured",
+		"price": "<a href='mailto:geovana@gijokadoces.com.br'>Peça já o seu!</a>"
+	    }
+	]
+    }
+}
