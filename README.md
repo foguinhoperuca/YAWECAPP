@@ -4,6 +4,8 @@ YAWECAPP
 Yet Another WEb Client APP is a sample app for start new project with  jquery + underscore + backbone + bootstrap + markup.
 Will work with awknet-commons (java backend)
 
+Developer: Jefferson Campos - @foguinhoperuca
+
 Previous Work
 =============
 
