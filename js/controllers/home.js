@@ -4,10 +4,7 @@ YAWECAPP.HomeController = Backbone.Router.extend({
 	'about': 'about',
 	'error': 'error',
 	'featured': 'featured',
-	'generic': 'generic',
-	'login': 'login',
-	'logout': 'logout',
-	'isLogged': 'isLogged'
+	'generic': 'generic'
     },
 
     index: function() {
@@ -23,12 +20,12 @@ YAWECAPP.HomeController = Backbone.Router.extend({
     },
 
     featured: function() {
-	YAWECAPP.showView('#main', new YAWECAPP.GenericView().render());
+	YAWECAPP.showView('#main', new YAWECAPP.FeaturedView({collection: YAWECAPP.featuredCollection}).render());
     },
 
     generic: function() {
-	// var tpl = 'person/cancel';
-	// MICASAAdminApp.showView('#main', new MICASAAdminApp.GenericView()).render(tpl);
+	var tpl = 'generic';
+	YAWECAPP.showView('#main', new YAWECAPP.GenericView()).render(tpl);
 
 	// var resultado = MICASAAdminApp.getResultado();
 	// console.log("resultado controller is:");
@@ -40,14 +37,5 @@ YAWECAPP.HomeController = Backbone.Router.extend({
         // } else {
 	//     MICASAAdminApp.showView('#main', new MICASAAdminApp.PainelView({ collection: resultado, model: model }).render());
         // }
-	
-    },
-
-    login: function() {
-	console.log('TODO implement login');
-    },
-
-    logout: function() {
-	console.log('TODO implement login');
     }
 });

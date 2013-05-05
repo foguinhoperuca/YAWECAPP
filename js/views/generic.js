@@ -3,6 +3,8 @@ YAWECAPP.GenericView = Backbone.View.extend({
     className: 'box',
 
     render: function(tpl) {
+	console.log("template is: ");
+	console.log(tpl);
 	if (tpl == undefined)
 	    this.navigate("error", {trigger: true});
 
@@ -19,7 +21,7 @@ YAWECAPP.GenericView = Backbone.View.extend({
     // TODO move it to generic model.
     search: function(ev) {
 	ev.preventDefault();
-	
+
 	// var cpf = $('#inputSearch').val();
 
 	// var person = new YAWECAPP.PersonManagementModel({cpf: cpf});

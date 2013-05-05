@@ -15,7 +15,6 @@ var YAWECAPP = {
 
 	this.genericModel = new YAWECAPP.GenericModel();
 
-
 	Backbone.history.start();
 	// FIXME not working out of box! Need use jquery to trigger url change! :(
 	// Backbone.history.start({ pushState: true });
@@ -62,9 +61,7 @@ var YAWECAPP = {
 	if (app == undefined)
 	    app = "yawecapp";
 
-	// TODO get info from a config file.
-	var backend = "backend";
-	var baseURL = "http://local." + app + "/" + backend + "/";
+	var baseURL = "http://local." + app + "/" + BACKEND + "/";
 	return baseURL;
     }
 };
