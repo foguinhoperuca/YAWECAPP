@@ -9,25 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="YAWECAPP" />
     <meta name="author" content="Jefferson Campos" />
-    <!-- Le stylesheets -->
-    <!-- Le CSS styles -->
-    <!--(if target prod)>
-	<link rel="stylesheet" href="css/app-min.css">
-	<!(endif)-->
-    <!--(if target local)><!-->
-	<link rel="stylesheet" href="css/bootstrap-min.css">
-	<link rel="stylesheet" href="css/bootstrap-responsive-min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<!--<!(endif)-->
-	<!-- <link rel="stylesheet" href="css/bootstrap-min.css" /> -->
-	<!-- <link rel="stylesheet" href="css/bootstrap-responsive-min.css" /> -->
+	<link rel="stylesheet" href="app/css/main.css">
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
-	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	    <![endif]-->
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
   </head>
   <body>
+
+    <!-- Le menu -->
     <div class="navbar navbar-inverse navbar-static-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -37,50 +28,46 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
           </a>
           <ul class="nav">
             <a href="#">
               <li>
-                <img src="img/backup.png" id="yawecapp_logo" width="40px">
+                <img src="app/img/backup.png" id="yawecapp_logo" width="40px">
               </li>
             </a>
           </ul>
-          <a class="brand" href="#about">YAWECAPP</a>
+          <a class="brand" href="#about">MICASA ADMIN</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-		  Main Features <b class="caret"></b>
-		</a>
-		<ul class="dropdown-menu">
-		  <li><a href="#featured">Featured</a></li>
-		  <li><a href="#error">Error</a></li>
-		  <li><a href="#generic">Generic</a></li>
-		</ul>
+              <li class="dropdown">
+                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">
+				  Main Features <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+				  <li class="dropdown"><a data-toggle="dropdown" href="#featured">Featured</a></li>
+				  <li class="dropdown"><a data-toggle="dropdown" href="#error">Error</a></li>
+				  <li class="dropdown"><a data-toggle="dropdown" href="#generic">Generic</a></li>
+				</ul>
               </li>
-              <li>
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-		  Login Features <b class="caret"></b>
-		</a>
-		<ul class="dropdown-menu">
-		  <li><a href="#login">Login</a></li>
-		  <li><a href="#logout">Logout</a></li>
-		  <li><a href="#isLogged">is Logged?</a></li>
-		  <li><a href="#hasPermission">has Permission?</a></li>
-		</ul>
+				  Login <b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+				  <li class="dropdown"><a data-toggle="dropdown" href="#login">Login</a></li>
+				  <li class="dropdown"><a data-toggle="dropdown" href="#logout">Logout</a></li>
+				  <li class="dropdown"><a data-toggle="dropdown" href="#isLogged">Is logged?</a></li>
+				  <li class="dropdown"><a data-toggle="dropdown" href="#hasPermission">Has Permission?</a></li>
+				</ul>
               </li>
               <li>
                 <a href="#about">About</a>
               </li>
             </ul>
-            <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
-            </p>
+			<p class="pull-right">
+			  <a href="#security/doLogin" class="btn btn-success">Login</a>
+			  <a href="#security/doLogout" class="btn btn-danger">Logout</a>
+			</p>               
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -90,33 +77,33 @@
 
     <!-- Le JS scripts -->
     <!--(if target prod)>
-	<script type="text/javascript" src="js/app-min.js"></script>
-	<!(endif)-->
+		<script type="text/javascript" src="js/app-min.js"></script>
+		<!(endif)-->
     <!--(if target local)><!-->
 
-	<script type="text/javascript" src="js/libs/jquery-min.js"></script>
-	<script type="text/javascript" src="js/libs/underscore-min.js"></script>
-	<script type="text/javascript" src="js/libs/backbone-min.js"></script>
-	<script type="text/javascript" src="js/libs/bootstrap-min.js"></script>
-	<script type="text/javascript" src="js/libs/markup-min.js"></script>
-	
-	<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="app/js/libs/jquery-min.js"></script>
+		<script type="text/javascript" src="app/js/libs/underscore-min.js"></script>
+		<script type="text/javascript" src="app/js/libs/backbone-min.js"></script>
+		<script type="text/javascript" src="app/js/libs/bootstrap-min.js"></script>
+		<script type="text/javascript" src="app/js/libs/markup-min.js"></script>
+		
+		<script type="text/javascript" src="app/js/app.js"></script>
 
-	<script type="text/javascript" src="js/collections/generic.js"></script>
-	<script type="text/javascript" src="js/collections/featured.js"></script>
-	<script type="text/javascript" src="js/collections/user.js"></script>
+		<script type="text/javascript" src="app/js/collections/generic.js"></script>
+		<script type="text/javascript" src="app/js/collections/featured.js"></script>
+		<script type="text/javascript" src="app/js/collections/user.js"></script>
 
-	<script type="text/javascript" src="js/models/generic.js"></script>
-	<script type="text/javascript" src="js/models/user.js"></script>
-	
-	<script type="text/javascript" src="js/controllers/home.js"></script>
-	<script type="text/javascript" src="js/controllers/user.js"></script>
-	
-	<script type="text/javascript" src="js/views/error.js"></script>
-	<script type="text/javascript" src="js/views/about.js"></script>
-	<script type="text/javascript" src="js/views/generic.js"></script>
-	<script type="text/javascript" src="js/views/featured.js"></script>
+		<script type="text/javascript" src="app/js/models/generic.js"></script>
+		<script type="text/javascript" src="app/js/models/user.js"></script>
+		
+		<script type="text/javascript" src="app/js/controllers/home.js"></script>
+		<script type="text/javascript" src="app/js/controllers/user.js"></script>
+		
+		<script type="text/javascript" src="app/js/views/error.js"></script>
+		<script type="text/javascript" src="app/js/views/about.js"></script>
+		<script type="text/javascript" src="app/js/views/generic.js"></script>
+		<script type="text/javascript" src="app/js/views/featured.js"></script>
 
-	<!--<!(endif)-->
+		<!--<!(endif)-->
 </body>
 </html>

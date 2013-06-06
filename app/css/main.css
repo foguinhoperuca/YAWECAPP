@@ -1,3 +1,9 @@
+/* @import url('../js/libs/bootstrap/docs/assets/css/bootstrap.css'); */
+/*@import url('../js/libs/bootstrap/docs/assets/css/bootstrap-responsive.css');*/
+
+@import url('bootstrap-min.css');
+@import url('bootstrap-responsive-min.css');
+
 /*BOOTSTRAP MODIFICATIONS*/
 ul, ol {
     margin: 0;

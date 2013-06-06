@@ -1,6 +1,6 @@
-YAWECAPP.FeaturedCollection = Backbone.Collection.extend({
+YAWECAPP.GenericCollection = Backbone.Collection.extend({
 
-    url: "data/featured.json",
+    url: "app/data/generic.json",
 
     initialize: function() {
 	this.fetch({async: false});
