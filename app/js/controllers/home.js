@@ -1,41 +1,57 @@
-YAWECAPP.HomeController = Backbone.Router.extend({
-    routes: {
-        '': 'index',
-	'about': 'about',
-	'error': 'error',
-	'featured': 'featured',
-	'generic': 'generic'
-    },
+define(
+	['backbone',
+	 'app',
+	 'views/about',
+	 'views/error',
+	 'views/featured'
+	],
+	function (Backbone, App, AboutView, ErrorView, FeaturedView){
 
-    index: function() {
-        this.navigate("about", {trigger: true});
-    },
+		var HomeController = Backbone.Router.extend({
+			routes: {
+				'': 'index',
+				'about': 'about',
+				'error': 'error',
+				'featured': 'featured',
+				'generic': 'generic'
+			},
 
-    about: function() {
-	YAWECAPP.showView('#main', new YAWECAPP.AboutView().render());
-    },
+			index: function() {
+				this.navigate("about", {trigger: true});
+			},
 
-    error: function() {
-	YAWECAPP.showView('#main', new YAWECAPP.ErrorView().render());
-    },
+			about: function() {
+				// YAWECAPP.showView('#main', new YAWECAPP.AboutView().render());
+				App.showView('#main', new AboutView().render());
+			},
 
-    featured: function() {
-	YAWECAPP.showView('#main', new YAWECAPP.FeaturedView({collection: YAWECAPP.featuredCollection}).render());
-    },
+			error: function() {
+				// YAWECAPP.showView('#main', new YAWECAPP.ErrorView().render());
+				App.showView('#main', new ErrorView().render());
+			},
 
-    generic: function() {
-	var tpl = 'generic';
-	YAWECAPP.showView('#main', new YAWECAPP.GenericView()).render(tpl);
+			featured: function() {
+				// YAWECAPP.showView('#main', new YAWECAPP.FeaturedView({collection: YAWECAPP.featuredCollection}).render());
+				App.showView('#main', new FeaturedView().render());
+			},
 
-	// var resultado = MICASAAdminApp.getResultado();
-	// console.log("resultado controller is:");
-	// console.log(resultado);
-	// var model = MICASAAdminApp.PainelModel;
+			generic: function() {
+				var tpl = 'generic';
+				YAWECAPP.showView('#main', new YAWECAPP.GenericView()).render(tpl);
 
-        // if (resultado == undefined) {
-	//     this.navigate("error", {trigger: true});
-        // } else {
-	//     MICASAAdminApp.showView('#main', new MICASAAdminApp.PainelView({ collection: resultado, model: model }).render());
-        // }
-    }
-});
+				// var resultado = MICASAAdminApp.getResultado();
+				// console.log("resultado controller is:");
+				// console.log(resultado);
+				// var model = MICASAAdminApp.PainelModel;
+
+				// if (resultado == undefined) {
+				//     this.navigate("error", {trigger: true});
+				// } else {
+				//     MICASAAdminApp.showView('#main', new MICASAAdminApp.PainelView({ collection: resultado, model: model }).render());
+				// }
+			}
+		});
+
+		return HomeController;
+	}
+);
