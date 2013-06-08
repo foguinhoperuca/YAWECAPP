@@ -12,17 +12,17 @@ ul li {
 }
 
 .navbar-inner {
-	-moz-border-radius: 0 !important;
-	-webkit-border-radius: 0 !important;
-	border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
 .navbar-static-top {
-	width: auto !important;
+    width: auto !important;
 }
 
 h3 {
-	color: #b22222 !important;
+    color: #b22222 !important;
 }
 
 /*Corrige a altura dos inputs dentro de uma div row-fluid no IE6-8*/
@@ -34,7 +34,7 @@ h3 {
 /*END OF BOOTSTRAP MODIFICATIONS*/
 
 html, body {
-   height: 100%;
+    height: 100%;
 }
 
 body {
@@ -94,11 +94,11 @@ body {
     border-right: 2px solid transparent;
 }
 /*.menu-itens > li:first-child {
-    padding: 5px 32px !important;
-}
-.menu-itens > li:last-child {
-    padding: 5px 42px !important;
-}*/
+  padding: 5px 32px !important;
+  }
+  .menu-itens > li:last-child {
+  padding: 5px 42px !important;
+  }*/
 .menu-itens > li:hover {
     /*background: #4d4d4d;*/
     background: #444;
@@ -192,5 +192,14 @@ img.center {
 }
 
 .resultado {
-	font-size: 36px;
+    font-size: 36px;
+}
+
+.error-meme {
+    width: 200px;
+    height: 200px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }

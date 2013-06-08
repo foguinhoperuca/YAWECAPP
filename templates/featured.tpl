@@ -9,8 +9,8 @@
   <div class="carousel-inner">
 
     <div class="active item">
-      <!-- <img src="img/featured/{{ productFeatured.id }}.jpg" alt="" width="750px" height="500px" /> -->
-      <img src="img/catalogs/featured/{{ productFeatured.id }}.jpg" alt="" />
+      <!-- <img src="img/catalogs/featured/{{ productFeatured.id }}.jpg" alt="" /> -->
+      <img src="img/memes/{{ productFeatured.id }}.png" alt="" />
       <div class="carousel-caption">
 	<h3>{{ productFeatured.name }}</h3>
 	<p>{{ productFeatured.description }}</p>
@@ -19,8 +19,8 @@
     </div>
     {{products}}
     <div class="item">
-      <!-- <img src="img/featured/{{ id }}.jpg" alt="" width="750px" height="500px" /> -->
-      <img src="img/catalogs/{{ category }}/{{ id }}.jpg" alt="" />
+      <!-- <img src="img/catalogs/{{ category }}/{{ id }}.jpg" alt="" /> -->
+      <img src="img/memes/{{ id }}.png" alt="" />
       <div class="carousel-caption">
 	<h3>{{ name }}</h3>
 	<p>{{ description }}</p>
