@@ -1,12 +1,18 @@
-YAWECAPP.GenericCollection = Backbone.Collection.extend({
+define([
+    , 'backbone'
+], function (Backbone){
+    var GenericCollection = Backbone.Collection.extend({
 
-    url: "app/data/generic.json",
+	url: "app/data/generic.json",
 
-    initialize: function() {
-	this.fetch({async: false});
-    },
+	initialize: function() {
+	    this.fetch({async: false});
+	},
 
-    parse: function(data) {
-	return data.featured;
-    }
+	parse: function(data) {
+	    return data.featured;
+	}
+    });
+
+    return GenericCollection;
 });

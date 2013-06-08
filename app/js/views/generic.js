@@ -1,47 +1,58 @@
-YAWECAPP.GenericView = Backbone.View.extend({
-    tagName: 'div',
-    className: 'box',
+define([
+    'backbone',
+    'markup',
+    'app'
+], function (Backbone, Markup, App){
 
-    render: function(tpl) {
-	console.log("template is: ");
-	console.log(tpl);
-	if (tpl == undefined)
-	    this.navigate("error", {trigger: true});
+    var GenericView = Backbone.View.extend({
+	tagName: 'div',
+	className: 'box',
 
-        var template = Mark.up(YAWECAPP.getTemplate(tpl));
-        $(this.el).html(template);
+	render: function(tpl) {
+	    console.log("template is: ");
+	    console.log(tpl);
 
-        return this;
-    },
+	    if (tpl == undefined)
+		this.navigate("error", {trigger: true});
 
-    events: {
-	'click #btnSearch': 'search'
-    },
+	    var template = Mark.up(App.getTemplate(tpl));
+	    $(this.el).html(template);
 
-    // TODO move it to generic model.
-    search: function(ev) {
-	ev.preventDefault();
+	    return this;
+	},
 
-	// var cpf = $('#inputSearch').val();
+	events: {
+	    'click #btnSearch': 'search'
+	},
 
-	// var person = new YAWECAPP.PersonManagementModel({cpf: cpf});
-	// person.fetch({async: false});
+	// TODO move it to generic model.
+	search: function(ev) {
+	    ev.preventDefault();
 
-	// console.log(person);
-	// var template;
-	// if (!person.get("message")) {
-	//     var temp = person.get("dateConfirmation")['$'].split(' ');
-	//     var dateConfirmation = temp[0].split('-');
-	//     dateConfirmation = dateConfirmation[2] + "/" + dateConfirmation[1] + "/" + dateConfirmation[0];
-	//     var time = temp[1].split('.');
+	    // var cpf = $('#inputSearch').val();
 
-	//     person.set("date", dateConfirmation);
-	//     person.set("time", time[0]);
+	    // var person = new YAWECAPP.PersonManagementModel({cpf: cpf});
+	    // person.fetch({async: false});
 
-	//     template = Mark.up(YAWECAPP.getTemplate("person/search"), person.toJSON());
-	// } else {
-	//     template = '<div class="alert alert-warning">' + person.get("message") + '</div>';
-	// }
-        // $('#divSearch').html( template );
-    }    
-});
+	    // console.log(person);
+	    // var template;
+	    // if (!person.get("message")) {
+	    //     var temp = person.get("dateConfirmation")['$'].split(' ');
+	    //     var dateConfirmation = temp[0].split('-');
+	    //     dateConfirmation = dateConfirmation[2] + "/" + dateConfirmation[1] + "/" + dateConfirmation[0];
+	    //     var time = temp[1].split('.');
+
+	    //     person.set("date", dateConfirmation);
+	    //     person.set("time", time[0]);
+
+	    //     template = Mark.up(YAWECAPP.getTemplate("person/search"), person.toJSON());
+	    // } else {
+	    //     template = '<div class="alert alert-warning">' + person.get("message") + '</div>';
+	    // }
+	    // $('#divSearch').html( template );
+	}    
+    });
+
+    return GenericView;
+}
+      );
