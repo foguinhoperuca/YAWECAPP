@@ -11,6 +11,7 @@
 ** Build Tool
 *** TODO grunt
 *** TODO AMD
+*** scaffoldr (@victorwpbastos)
 ** Package Manager
 *** DONE requirejs
 *** TODO bower
@@ -20,6 +21,8 @@
 **** yo
 **** grunt
 **** bower
+** Test
+*** TODO jasmin
 * Funcionality
 ** User
 *** login
