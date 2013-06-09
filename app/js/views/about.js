@@ -8,7 +8,6 @@ define([
 	tagName: 'div',
 	className: 'box',
 	render: function() {
-	    // FIXME use Markup (define) instead global Mark
 	    var template = Markup.up(App.getTemplate('about'));
 
 	    $(this.el).html( template );

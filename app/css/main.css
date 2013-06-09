@@ -159,11 +159,17 @@ body {
 
 /* ADMIN MENU END */
 
-/* PRODUCTS */
-#product_photo {
+/* YAWECAPP */
+.img-featured {
     position: relative;
-    height: 100px;
-    width: 200px;
+    height: 500px;
+    width: 500px;
+}
+
+.img-error {
+    position: relative;
+    height: 300px;
+    width: 300px;
 }
 
 .product {

@@ -1,8 +1,8 @@
 {
-    "painel":
+    "generic":
     {
-		"total": 10155,
-		"novos": 6935,
-		"atualizados": 3220
+	"id": 1,
+	"name": "El YAWECAPP",
+	"description": "A quick template for a web app"
     }
 }

@@ -1,11 +1,10 @@
 <h1>Error!</h1>
 <p class="text-error">
-  Ocorreu um erro inesperado!<br />
-  Caso o problema persista, por favor, entre em contato com o sysadmin: <a href="mailto:foguinho.peruca@gmail.com">Jefferson Campos (foguinho.peruca@gmail.com)</a>.
+  Oh boy! We got some error...<br />
+  Call 911 (sysadmin): <a href="mailto:contact@somewhere.com">Sysadmin Help (contact@somewhere.com)</a>.
 </p>
 <br />
+<img src="app/img/memes/{{ image.error }}.png" class="img-error center" alt="Some meme" />
 <br />
-<a href="#" class="btn btn-info"><i class="icon-home icon-white"></i> P&aacute;gina Inicial</a>
-
-
-
+<br />
+<a href="#" class="btn btn-info"><i class="icon-home icon-white"></i> Home</a>

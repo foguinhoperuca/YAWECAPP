@@ -1,21 +1,19 @@
 define([
-    'backbone',
-    'markup',
-    'app'
-], function (Backbone, Markup, App){
+    'jquery'
+    , 'backbone'
+    , 'markup'
+    , 'app'
+], function ($, Backbone, Markup, App){
 
     var GenericView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'box',
 
 	render: function(tpl) {
-	    console.log("template is: ");
-	    console.log(tpl);
-
 	    if (tpl == undefined)
-		this.navigate("error", {trigger: true});
+		console.log("template is undefined");
 
-	    var template = Mark.up(App.getTemplate(tpl));
+	    var template = Markup.up(App.getTemplate(tpl));
 	    $(this.el).html(template);
 
 	    return this;
@@ -54,5 +52,4 @@ define([
     });
 
     return GenericView;
-}
-      );
+});

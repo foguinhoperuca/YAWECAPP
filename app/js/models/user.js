@@ -1,8 +1,9 @@
 define([
-    'backbone'
+    'jquery'
+    , 'backbone'
     , 'underscore'
     , 'app'
-], function (Backbone, _, App) {
+], function ($, Backbone, _, App) {
     var UserModel = Backbone.Model.extend({
 
 	defaults: {
@@ -33,7 +34,7 @@ define([
 		status = false;
 	    }
 
-            $('#divPasswordMessage').html( template );
+            $('#divPasswordMessage').html(template);
 	    this.validPassword = status;
 	    return status;
 	},

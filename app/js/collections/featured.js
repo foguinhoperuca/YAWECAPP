@@ -1,6 +1,6 @@
 define([
-    , 'backbone'
-], function (Backbone){
+    'backbone'
+], function (Backbone) {
     var FeaturedCollection = Backbone.Collection.extend({
 
 	url: "app/data/featured.json",

@@ -6,7 +6,7 @@ define([
     // ,'views/user/logged'
     // ,'views/user/permission'
     ,'views/user/updatePassword'
-], function (Backbone, App, updatePasswordView){
+], function (Backbone, App, UpdatePasswordView){
     var UserController = Backbone.Router.extend({
 	routes: {
 	    'login': 'login',

@@ -1,29 +1,24 @@
-define(
-	['backbone',
-	 'markup',
-	 'app'
-	],
-	function (Backbone, Markup, App){
-		var FeaturedView = Backbone.View.extend({
-			tagName: 'div',
-			className: 'box',
-			render: function() {
-				// var template = Mark.up( YAWECAPP.getTemplate('featured') );
-				// $(this.el).html( template );
-				// return this;
+define([
+    'jquery'
+    , 'backbone'
+    , 'app'
+    , 'markup'
+    , 'collections/featured'
+], function ($, Backbone, App, Markup, FeaturedCollection){
+    var FeaturedView = Backbone.View.extend({
+	tagName: 'div',
+	className: 'box',
+	render: function() {
+	    var data = new FeaturedCollection().toJSON();
+	    var featured = data[0];
+	    var template = Markup.up(App.getTemplate("featured"), featured);
 
-				// var data = this.collection.toJSON();
-				// var featured = data[0];
-				// var template = Mark.up(App.getTemplate("featured"), featured);
-				var template = Mark.up(App.getTemplate("featured"));
+	    // $('.carousel').carousel();
 
-				// $('.carousel').carousel();
-
-				$(this.el).html(template);
-				return this;
-			}
-		});
-
-		return FeaturedView;
+	    $(this.el).html(template);
+	    return this;
 	}
-);
+    });
+
+    return FeaturedView;
+});

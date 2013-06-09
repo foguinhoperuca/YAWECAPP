@@ -1,7 +1,8 @@
 define([
-    'backbone'
+    'jquery'
+    , 'backbone'
     , 'app'
-], function (Backbone, App) {
+], function ($, Backbone, App) {
     var SearchView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'box',

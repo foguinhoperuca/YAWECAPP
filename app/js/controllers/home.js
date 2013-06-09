@@ -1,10 +1,10 @@
 define([
     'backbone'
-    ,'app'
-    ,'views/about'
-    ,'views/error'
-    ,'views/featured'
-    ,'views/generic'
+    , 'app'
+    , 'views/about'
+    , 'views/error'
+    , 'views/featured'
+    , 'views/generic'
 ], function (Backbone, App, AboutView, ErrorView, FeaturedView, GenericView) {
     var HomeController = Backbone.Router.extend({
 	routes: {

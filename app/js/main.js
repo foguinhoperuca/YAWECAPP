@@ -116,7 +116,7 @@ require.config({
 
 	// App
 	'user': {
-	    exports: '$'
+	    exports: 'user'
 	},
 
 	// LIBS

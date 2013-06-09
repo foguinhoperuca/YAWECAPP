@@ -1,5 +1,5 @@
 define([
-    , 'backbone'
+    'backbone'
 ], function (Backbone){
     var GenericCollection = Backbone.Collection.extend({
 
@@ -10,7 +10,7 @@ define([
 	},
 
 	parse: function(data) {
-	    return data.featured;
+	    return data.generic;
 	}
     });
 
