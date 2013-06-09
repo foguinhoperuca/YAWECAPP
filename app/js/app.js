@@ -1,6 +1,5 @@
 define([
     'jquery'
-    // FIXME sometimes, bootstrp is loading before jquery. How to fix ir?
     , 'bootstrap'
     , 'backbone'
     , 'config'

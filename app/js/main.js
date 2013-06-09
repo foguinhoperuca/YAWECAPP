@@ -124,7 +124,8 @@ require.config({
 	    exports: '$'
 	},
 	'bootstrap': {
-	    exports : 'jquery'
+	    deps: ['jquery'],
+	    exports : 'bootstrap'
 	},
 	'markup': {
 	    exports: 'Mark'
