@@ -1,0 +1,30 @@
+* TODO Implement new frameworks/modern development workflow
+** template
+*** DONE Mustache
+*** DONE Markup
+*** TODO Handlesbar
+** MVC
+*** DONE Backbone
+*** TODO Marionette
+*** TODO Emberjs
+*** TODO Angularjs
+** Build Tool
+*** TODO grunt
+*** TODO AMD
+** Package Manager
+*** DONE requirejs
+*** TODO bower
+*** TODO brunch.io
+*** TODO jamjs
+*** TODO yeoman
+**** yo
+**** grunt
+**** bower
+* Funcionality
+** User
+*** login
+*** logout
+*** is logged?
+*** has permission?
+** Backend
+*** migrate awknet-commons arch
