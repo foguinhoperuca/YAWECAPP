@@ -1,76 +1,81 @@
 define([
-    'jquery'
-    , 'bootstrap'
-    , 'backbone'
-    , 'config'
-], function ($, Bootstrap, Backbone, Config){
-    var App = {
+		'jquery'
+		, 'bootstrap'
+		, 'backbone'
+		, 'marionette'
+		, 'config'
+], function ($, Bootstrap, Backbone, Marionette, Config){
+		// var App = {
+		var App = new Marionette.Application();
 
-	getFeatured: function() {
-	    // return _.map(this.EmployeeCollection.where({id: id}), function(obj){ return obj.attributes; });
-	    return this.FeaturedCollection;
-	},
+		App.addRegions({
+				main: '#main'
+		});
 
-	getTemplate: function(template) {
-	    return  $.ajax({
-		type: "GET",
-		url: "app/templates/" + template + ".tpl",
-		async: false
-	    }).responseText;
-	},
+		App.getFeatured = function() {
+				// return _.map(this.EmployeeCollection.where({id: id}), function(obj){ return obj.attributes; });
+				return this.FeaturedCollection;
+		};
 
-	showView: function (selector, view) {
-	    if (this.currentView) {
-		this.currentView.close();
-	    }
+		App.getTemplate = function(template) {
+				return  $.ajax({
+						type: "GET",
+						url: "app/templates/" + template + ".tpl",
+						async: false
+				}).responseText;
+		};
 
-	    $(selector).html(view.el);
-	    this.currentView = view;
+		App.showView = function (selector, view) {
+				if (this.currentView) {
+						this.currentView.close();
+				}
 
-	    return view;
-	},
+				$(selector).html(view.el);
+				this.currentView = view;
 
-	callTooltip: function(view) {
-	    view.$('.tooltip-top').tooltip({
-		placement: 'top'
-	    });
-	    view.$('.tooltip-right').tooltip({
-		placement: 'right'
-	    });
-	    view.$('.tooltip-bottom').tooltip({
-		placement: 'bottom'
-	    });
-	    view.$('.tooltip-left').tooltip({
-		placement: 'left'
-	    });
-	},
+				return view;
+		};
 
-	getBaseURL: function(app) {
-	    if (app == undefined)
-		app = "yawecapp";
+		App.callTooltip = function(view) {
+				view.$('.tooltip-top').tooltip({
+						placement: 'top'
+				});
+				view.$('.tooltip-right').tooltip({
+						placement: 'right'
+				});
+				view.$('.tooltip-bottom').tooltip({
+						placement: 'bottom'
+				});
+				view.$('.tooltip-left').tooltip({
+						placement: 'left'
+				});
+		};
 
-	    var baseURL = "http://local." + app + "/" + Config.backend + "/";
-	    return baseURL;
-	},
+		App.getBaseURL = function(app) {
+				if (app == undefined)
+						app = "yawecapp";
 
-	showView: function (selector, view) {
-	    if (this.currentView) {
-		this.currentView.close();
-	    }
+				var baseURL = "http://local." + app + "/" + Config.backend + "/";
+				return baseURL;
+		};
 
-	    $(selector).html(view.el);
-	    this.currentView = view;
+		App.showView = function (selector, view) {
+				if (this.currentView) {
+						this.currentView.close();
+				}
 
-	    return view;
-	}
+				$(selector).html(view.el);
+				this.currentView = view;
 
-	,ConfigureAjaxBackbone: function () {
-	    arguments[0].async = false;
-	    arguments[0].cache = false;
+				return view;
+		};
 
-	    return Backbone.$.ajax.apply(Backbone.$, arguments);
-	}
-    };
+		App.ConfigureAjaxBackbone = function () {
+				arguments[0].async = false;
+				arguments[0].cache = false;
+
+				return Backbone.$.ajax.apply(Backbone.$, arguments);
+		};
 
     return App;
 });
