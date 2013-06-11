@@ -4,18 +4,27 @@ define([
 		, 'marionette'
     , 'app'
 		, 'text!../../../templates/marionette/itemView.tpl'
-], function ($, Markup, Marionette, App, Template){
+		, 'models/meme'
+], function ($, Markup, Marionette, App, ItemViewTemplate, MemeModel){
     var ItemView = Marionette.ItemView.extend({
 				// template: App.getTemplate('marionette/itemView'),
-				template: Template,
+				template: ItemViewTemplate,
 				tagName: 'div',
 				className: 'box',
 
-				render: function() {
-						var page = Markup.up(this.template);
-						$(this.el).html(page);
+				initialize: function() {
+						this.model = new MemeModel();
+				},
 
-						return this;
+				onRender: function() {
+						// var page = Markup.up(this.template);
+						// $(this.el).html(page);
+
+						// return this;
+
+						// console.log(this.template);
+
+						// console.log("render itemView simple");
 				}
     });
 

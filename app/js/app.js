@@ -1,16 +1,20 @@
 define([
 		'jquery'
+		, 'markup'
 		, 'bootstrap'
 		, 'backbone'
 		, 'marionette'
 		, 'config'
-], function ($, Bootstrap, Backbone, Marionette, Config){
-		// var App = {
+], function ($, Markup, Bootstrap, Backbone, Marionette, Config){
 		var App = new Marionette.Application();
 
 		App.addRegions({
 				mainRegion: '#main'
 		});
+
+		Marionette.Renderer.render = function(template, data) {
+				return Markup.up(template, data);
+		};
 
 		App.getFeatured = function() {
 				// return _.map(this.EmployeeCollection.where({id: id}), function(obj){ return obj.attributes; });
