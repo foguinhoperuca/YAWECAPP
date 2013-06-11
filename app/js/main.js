@@ -28,6 +28,8 @@ require.config({
 				// 'underscore'                     : 'libs/underscore/underscore',
 				// 'uploadify'                      : 'libs/jquery.uploadify.min'
 
+				// RequireJS
+				'text': 'libs/text',
 
 				// LIBS
 				'underscore': 'libs/underscore-min',
@@ -120,6 +122,11 @@ require.config({
 						exports: 'user'
 				},
 
+				// RequireJS
+				'text': {
+						exports: 'text'
+				},
+
 				// LIBS
 				'jquery': {
 						exports: '$'
@@ -150,7 +157,8 @@ require([
     'backbone'
     , 'controllers/home'
     , 'controllers/user'
-], function(Backbone, HomeController, UserController) {
+    , 'controllers/marionette'
+], function(Backbone, HomeController, UserController, MarionetteController) {
 
     // solve multiple events problem
     Backbone.View.prototype.close = function () {
@@ -161,6 +169,7 @@ require([
     // start routers
     new HomeController();
     new UserController();
+		new MarionetteController();
 
     Backbone.history.start();
     // FIXME not working out of box! Need use jquery to trigger url change! :(

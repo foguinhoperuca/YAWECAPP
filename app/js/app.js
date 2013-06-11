@@ -9,7 +9,7 @@ define([
 		var App = new Marionette.Application();
 
 		App.addRegions({
-				main: '#main'
+				mainRegion: '#main'
 		});
 
 		App.getFeatured = function() {
@@ -17,6 +17,7 @@ define([
 				return this.FeaturedCollection;
 		};
 
+		// TODO create a global function to load tpl usig requirejs but without text plugin.
 		App.getTemplate = function(template) {
 				return  $.ajax({
 						type: "GET",
@@ -59,17 +60,6 @@ define([
 				return baseURL;
 		};
 
-		App.showView = function (selector, view) {
-				if (this.currentView) {
-						this.currentView.close();
-				}
-
-				$(selector).html(view.el);
-				this.currentView = view;
-
-				return view;
-		};
-
 		App.ConfigureAjaxBackbone = function () {
 				arguments[0].async = false;
 				arguments[0].cache = false;
@@ -77,5 +67,5 @@ define([
 				return Backbone.$.ajax.apply(Backbone.$, arguments);
 		};
 
-    return App;
+		return App;
 });

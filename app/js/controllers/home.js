@@ -5,8 +5,7 @@ define([
 		, 'views/error'
 		, 'views/featured'
 		, 'views/generic'
-		, 'views/itemView'
-], function (Backbone, App, AboutView, ErrorView, FeaturedView, GenericView, ItemView) {
+], function (Backbone, App, AboutView, ErrorView, FeaturedView, GenericView) {
 		var HomeController = Backbone.Router.extend({
 				routes: {
 						'': 'index',
@@ -47,12 +46,6 @@ define([
 						// } else {
 						//     MICASAAdminApp.showView('#main', new MICASAAdminApp.PainelView({ collection: resultado, model: model }).render());
 						// }
-				},
-
-				itemView: function() {
-						// Pass itemView
-						App.main.show(new ItemView());
-						// App.showView('#main', new AboutView().render());
 				}
 		});
 
