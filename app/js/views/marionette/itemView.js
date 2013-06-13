@@ -1,12 +1,12 @@
 define([
-    'jquery'
-    , 'markup'
+		'jquery'
+		, 'markup'
 		, 'marionette'
-    , 'app'
+		, 'app'
 		, 'text!../../../templates/marionette/itemView.tpl'
 		, 'models/meme'
 ], function ($, Markup, Marionette, App, ItemViewTemplate, MemeModel){
-    var ItemView = Marionette.ItemView.extend({
+		var ItemView = Marionette.ItemView.extend({
 				// template: App.getTemplate('marionette/itemView'),
 				template: ItemViewTemplate,
 				tagName: 'div',
@@ -26,7 +26,7 @@ define([
 
 						// console.log("render itemView simple");
 				}
-    });
+		});
 
-    return ItemView;
+		return ItemView;
 });

@@ -9,7 +9,9 @@ define([
 		var App = new Marionette.Application();
 
 		App.addRegions({
-				mainRegion: '#main'
+				mainRegion: '#main',
+				menuRegion: '#menu',
+				footerRegion: '#footer'
 		});
 
 		Marionette.Renderer.render = function(template, data) {

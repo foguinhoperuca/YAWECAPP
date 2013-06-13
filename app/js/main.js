@@ -155,10 +155,12 @@ require.config({
 // TODO put everybody in router.js
 require([
     'backbone'
+    , 'app'
     , 'controllers/home'
     , 'controllers/user'
     , 'controllers/marionette'
-], function(Backbone, HomeController, UserController, MarionetteController) {
+    , 'views/menu'
+], function(Backbone, App, HomeController, UserController, MarionetteController, MenuView) {
 
     // solve multiple events problem
     Backbone.View.prototype.close = function () {
@@ -174,4 +176,6 @@ require([
     Backbone.history.start();
     // FIXME not working out of box! Need use jquery to trigger url change! :(
     // Backbone.history.start({ pushState: true });
+
+		App.menuRegion.show(new MenuView());
 });

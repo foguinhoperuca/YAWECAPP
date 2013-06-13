@@ -9,13 +9,13 @@ define([
 ], function ($, Markup, Marionette, App, MemeCollection, ItemViewTemplate, CompositeViewTemplate){
 		var itemView = Marionette.ItemView.extend({
 				template: ItemViewTemplate,
-				tagName: 'div'
+				tagName: 'tr'
 		});
 
 		var CompositeView = Marionette.CompositeView.extend({
 				template: CompositeViewTemplate,
 				itemView: itemView,
-				itemViewContainer: '#divMeme',
+				itemViewContainer: '#tbodyItem',
 				className: 'box',
 				tagName: 'div',
 				collection: new MemeCollection()

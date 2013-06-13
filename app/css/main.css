@@ -178,6 +178,14 @@ body {
     width: 50px;
 }
 
+.composite-footer {
+		background-color: #0f0;
+}
+
+.composite-tbl {
+		border: solid red 5px;
+}
+
 .product {
     margin-left:auto;
     margin-right:auto;
