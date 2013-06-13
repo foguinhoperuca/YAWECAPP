@@ -186,17 +186,12 @@ body {
 		border: solid red 5px;
 }
 
-.product {
-    margin-left:auto;
-    margin-right:auto;
-    width:60%;
-}
-
 p.blocktext {
     text-align: center;
 }
 
 div.center {
+		float: none;
     margin-left: auto;
     margin-right: auto;
     width: 30em;
@@ -224,8 +219,22 @@ img.center {
 .error-meme {
     width: 200px;
     height: 200px;
-
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+/* YAWECAPP */
+
+/* FOOTER */
+
+.push {
+		height: 71px;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -71px;
+  padding: 0 !important;
 }
