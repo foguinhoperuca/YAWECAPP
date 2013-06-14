@@ -1,18 +1,18 @@
 define([
-    'backbone'
+		'backbone'
 ], function (Backbone){
-    var MemeCollection = Backbone.Collection.extend({
+		var MemeCollection = Backbone.Collection.extend({
 
-	url: "app/data/meme.json",
+				url: "app/data/meme.json",
 
-	initialize: function() {
-	    this.fetch({async: false});
-	},
+				initialize: function() {
+						this.fetch({async: false});
+				},
 
-	parse: function(data) {
-	    return data.memes;
-	}
-    });
+				parse: function(data) {
+						return data.memes;
+				}
+		});
 
-    return MemeCollection;
+		return MemeCollection;
 });

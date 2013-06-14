@@ -1,19 +1,13 @@
 define([
-		'jquery'
-		, 'backbone'
+		'marionette'
 		, 'app'
-		, 'markup'
-], function ($, Backbone, App, Markup){
-		var AboutView = Backbone.View.extend({
+		, 'text!../../templates/about.tpl'
+], function (Marionette, App, Template)  {
+		var ItemView = Marionette.ItemView.extend({
+				template: Template,
 				tagName: 'div',
-				className: 'box',
-				render: function() {
-						var template = Markup.up(App.getTemplate('about'));
-
-						$(this.el).html( template );
-						return this;
-				}
+				className: 'box'
 		});
 
-		return AboutView;
+		return ItemView;
 });

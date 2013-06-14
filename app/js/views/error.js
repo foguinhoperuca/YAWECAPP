@@ -1,28 +1,20 @@
 define([
-    'jquery'
-    , 'backbone'
-    , 'markup'
-    , 'app'
-], function ($, Backbone, Markup, App){
-    var ErrorView = Backbone.View.extend({
-	tagName: 'div',
-	className: 'box',
-	render: function() {
-	    var numberMemes = 10;
-	    var random = Math.floor((Math.random() * numberMemes) + 1);
-	    var context = {
-		image: {
-		    error: random
-		}
-	    };
+		'marionette'
+		, 'app'
+		, 'models/meme'
+		, 'text!../../templates/error.tpl'
+], function (Marionette, App, MemeModel, Template)  {
+		var ItemView = Marionette.ItemView.extend({
+				template: Template,
+				tagName: 'div',
+				className: 'box',
+				initialize: function() {
+						var numberMemes = 10;
+						var random = Math.floor((Math.random() * numberMemes) + 1);
 
-	    var template = App.getTemplate('error');
-	    var page = Markup.up(template, context);
-	    $(this.el).html(page);
+						this.model = new MemeModel({id: random});
+				}
+		});
 
-	    return this;
-	}
-    });
-
-    return ErrorView;
+		return ItemView;
 });

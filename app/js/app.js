@@ -18,44 +18,13 @@ define([
 				return Markup.up(template, data);
 		};
 
-		App.getFeatured = function() {
-				// return _.map(this.EmployeeCollection.where({id: id}), function(obj){ return obj.attributes; });
-				return this.FeaturedCollection;
-		};
-
-		// TODO create a global function to load tpl usig requirejs but without text plugin.
+		// TODO implement all, except generic, to use marionette
 		App.getTemplate = function(template) {
 				return  $.ajax({
 						type: "GET",
 						url: "app/templates/" + template + ".tpl",
 						async: false
 				}).responseText;
-		};
-
-		App.showView = function (selector, view) {
-				if (this.currentView) {
-						this.currentView.close();
-				}
-
-				$(selector).html(view.el);
-				this.currentView = view;
-
-				return view;
-		};
-
-		App.callTooltip = function(view) {
-				view.$('.tooltip-top').tooltip({
-						placement: 'top'
-				});
-				view.$('.tooltip-right').tooltip({
-						placement: 'right'
-				});
-				view.$('.tooltip-bottom').tooltip({
-						placement: 'bottom'
-				});
-				view.$('.tooltip-left').tooltip({
-						placement: 'left'
-				});
 		};
 
 		App.getBaseURL = function(app) {

@@ -13,18 +13,14 @@ define([
 				},
 
 				itemView: function() {
-						// Pass itemView
 						App.mainRegion.show(new ItemView());
-						// App.showView('#main', new AboutView().render());
 				},
 
 				compositeView: function() {
-						// App.showView('#main', new AboutView().render());
 						App.mainRegion.show(new CompositeView());
 				},
 
 				collectionView: function() {
-						// App.showView('#main', new AboutView().render());
 						App.mainRegion.show(new CollectionView());
 				}
 		});

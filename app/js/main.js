@@ -160,7 +160,8 @@ require([
     , 'controllers/user'
     , 'controllers/marionette'
     , 'views/menu'
-], function(Backbone, App, HomeController, UserController, MarionetteController, MenuView) {
+    , 'views/footer'
+], function(Backbone, App, HomeController, UserController, MarionetteController, MenuView, FooterView) {
 
     // solve multiple events problem
     Backbone.View.prototype.close = function () {
@@ -178,4 +179,5 @@ require([
     // Backbone.history.start({ pushState: true });
 
 		App.menuRegion.show(new MenuView());
+		App.footerRegion.show(new FooterView());
 });

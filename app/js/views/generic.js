@@ -1,55 +1,42 @@
 define([
-    'jquery'
-    , 'backbone'
-    , 'markup'
-    , 'app'
-], function ($, Backbone, Markup, App){
+		'marionette'
+		, 'app'
+], function (Marionette, App)  {
+		var ItemView = Marionette.ItemView.extend({
+				tagName: 'div',
+				className: 'box',
 
-    var GenericView = Backbone.View.extend({
-	tagName: 'div',
-	className: 'box',
+				initialize: function(param) {
+						this.template = App.getTemplate(param.tpl);
+				}
 
-	render: function(tpl) {
-	    if (tpl == undefined)
-		console.log("template is undefined");
+				// TODO move it to generic model.
+				// , search: function(ev) {
+				// 		ev.preventDefault();
 
-	    var template = Markup.up(App.getTemplate(tpl));
-	    $(this.el).html(template);
+				// 		var cpf = $('#inputSearch').val();
 
-	    return this;
-	},
+				// 		var person = new YAWECAPP.PersonManagementModel({cpf: cpf});
+				// 		person.fetch({async: false});
 
-	events: {
-	    'click #btnSearch': 'search'
-	},
+				// 		console.log(person);
+				// 		var template;
+				// 		if (!person.get("message")) {
+				// 				var temp = person.get("dateConfirmation")['$'].split(' ');
+				// 				var dateConfirmation = temp[0].split('-');
+				// 				dateConfirmation = dateConfirmation[2] + "/" + dateConfirmation[1] + "/" + dateConfirmation[0];
+				// 				var time = temp[1].split('.');
 
-	// TODO move it to generic model.
-	search: function(ev) {
-	    ev.preventDefault();
+				// 				person.set("date", dateConfirmation);
+				// 				person.set("time", time[0]);
 
-	    // var cpf = $('#inputSearch').val();
+				// 				template = Mark.up(YAWECAPP.getTemplate("person/search"), person.toJSON());
+				// 		} else {
+				// 				template = '<div class="alert alert-warning">' + person.get("message") + '</div>';
+				// 		}
+				// 		$('#divSearch').html( template );
+				// }		 
+		});
 
-	    // var person = new YAWECAPP.PersonManagementModel({cpf: cpf});
-	    // person.fetch({async: false});
-
-	    // console.log(person);
-	    // var template;
-	    // if (!person.get("message")) {
-	    //     var temp = person.get("dateConfirmation")['$'].split(' ');
-	    //     var dateConfirmation = temp[0].split('-');
-	    //     dateConfirmation = dateConfirmation[2] + "/" + dateConfirmation[1] + "/" + dateConfirmation[0];
-	    //     var time = temp[1].split('.');
-
-	    //     person.set("date", dateConfirmation);
-	    //     person.set("time", time[0]);
-
-	    //     template = Mark.up(YAWECAPP.getTemplate("person/search"), person.toJSON());
-	    // } else {
-	    //     template = '<div class="alert alert-warning">' + person.get("message") + '</div>';
-	    // }
-	    // $('#divSearch').html( template );
-	}    
-    });
-
-    return GenericView;
+		return ItemView;
 });
