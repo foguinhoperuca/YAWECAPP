@@ -28,6 +28,7 @@
 	</table>
 	<hr />
 	<p class="composite-footer">
-		This is a footer. It was executed only 01 time. Composite view was successfully executed.
+		This is a footer. It was executed only 01 time. Composite view was
+		successfully executed.
 	</p>
 </div>

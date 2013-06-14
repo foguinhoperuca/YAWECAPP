@@ -1,12 +1,10 @@
 define([
-		'jquery'
-		, 'markup'
-		, 'marionette'
+		'marionette'
 		, 'app'
 		, 'collections/meme'
 		, 'text!../../../templates/marionette/compositeItemView.tpl'
 		, 'text!../../../templates/marionette/compositeView.tpl'
-], function ($, Markup, Marionette, App, MemeCollection, ItemViewTemplate, CompositeViewTemplate){
+], function (Marionette, App, MemeCollection, ItemViewTemplate, CompositeViewTemplate){
 		var itemView = Marionette.ItemView.extend({
 				template: ItemViewTemplate,
 				tagName: 'tr'
