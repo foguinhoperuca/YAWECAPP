@@ -1,18 +1,18 @@
 define([
-    'backbone'
+		'backbone'
 ], function (Backbone){
-    var GenericCollection = Backbone.Collection.extend({
+		var GenericCollection = Backbone.Collection.extend({
 
-	url: "app/data/generic.json",
+				url: "app/data/generic.json",
 
-	initialize: function() {
-	    this.fetch({async: false});
-	},
+				initialize: function() {
+						this.fetch({async: false});
+				},
 
-	parse: function(data) {
-	    return data.generic;
-	}
-    });
+				parse: function(data) {
+						return data.generic;
+				}
+		});
 
-    return GenericCollection;
+		return GenericCollection;
 });

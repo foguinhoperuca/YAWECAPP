@@ -3,8 +3,7 @@ define([
 ], function (Backbone) {
 		var FeaturedCollection = Backbone.Collection.extend({
 
-				// url: "app/data/featured.json",
-				url: "app/data/featuredCarousel.json",
+				url: "app/data/featured.json",
 
 				initialize: function() {
 						this.fetch({async: false});

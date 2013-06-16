@@ -8,13 +8,13 @@ define([
 		var itemView = Marionette.ItemView.extend({
 				template: ItemViewTemplate,
 				tagName: 'div',
-				className: 'item'
+				className: function() {
 
-				, initialize: function() {
-						console.log("template is item:");
-						console.log(this.template);
+						if (this.model.get("active") == true)
+								return "item active";
+
+						return "item";
 				}
-
 		});
 
 		var CompositeView = Marionette.CompositeView.extend({
@@ -24,19 +24,6 @@ define([
 				collection: new FeaturedCollection(),
 				itemView: itemView,
 				itemViewContainer: '#featuredCarousel',
-				initialize: function() {
-						var coll = new FeaturedCollection();
-						console.log("initialize coll");
-						console.log(coll);
-
-						this.model = coll.at(0);
-						console.log("model is:");
-						console.log(this.model);
-
-						console.log("template is:");
-						console.log(this.template);
-				}
-				
 		});
 
 		return CompositeView;
