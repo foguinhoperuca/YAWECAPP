@@ -8,6 +8,8 @@ define([
 ], function ($, Markup, Bootstrap, Backbone, Marionette, Config){
 		var App = new Marionette.Application();
 
+		// FIXME Bootstrap var is in memory but i cant access it!
+
 		App.addRegions({
 				mainRegion: '#main',
 				menuRegion: '#menu',
@@ -31,8 +33,7 @@ define([
 				if (app == undefined)
 						app = "yawecapp";
 
-				var baseURL = "http://local." + app + "/" + Config.backend + "/";
-				return baseURL;
+				return "http://local." + app + "/" + Config.backend + "/";
 		};
 
 		App.ConfigureAjaxBackbone = function () {

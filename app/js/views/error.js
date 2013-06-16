@@ -3,6 +3,7 @@ define([
 		, 'app'
 		, 'models/meme'
 		, 'text!../../templates/error.tpl'
+
 ], function (Marionette, App, MemeModel, Template)  {
 		var ItemView = Marionette.ItemView.extend({
 				template: Template,

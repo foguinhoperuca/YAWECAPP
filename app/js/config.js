@@ -1,3 +1,7 @@
-var Config = {
-    backend: "backend"
-};
+define([
+],function() {
+		var config = {
+				backend: "backend"
+		};
+		return config;
+});

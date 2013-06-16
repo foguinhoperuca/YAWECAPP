@@ -29,7 +29,6 @@
 						<li class="dropdown"><a href="#featured">Featured</a></li>
 						<li class="dropdown"><a href="#error">Error</a></li>
 						<li class="dropdown"><a href="#about">About</a></li>
-						<li class="divider"></li>
 						<li class="dropdown"><a href="#generic">Generic</a></li>
 					</ul>
 				</li>
@@ -62,7 +61,9 @@
 							<ul class="dropdown-menu">
 								<li class="dropdown"><a href="#marionette/itemView">itemView</a></li>
 								<li class="dropdown"><a href="#marionette/compositeView">compositeView</a></li>
-								<li class="dropdown"><a href="#error">Layout</a></li>
+								<li class="divider"></li>
+								<li class="dropdown"><a href="#error">CollectionView</a></li>
+								<li class="dropdown"><a href="#error">Layout & Regions</a></li>
 							</ul>
 						</li>
 					</ul>
