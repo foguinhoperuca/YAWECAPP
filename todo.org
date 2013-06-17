@@ -6,8 +6,10 @@
 ** MVC
 *** DONE Backbone
 *** TODO Marionette
-**** TODO Migrate all app to marionette
-**** TODO Migrate Featured to marionette layout
+**** TODO Implement a layout with regions
+**** TODO CompositeView
+**** DONE Migrate all app to marionette
+**** DONE Migrate Featured to marionette layout
 **** DONE Migrate generic to receive in url the template
 **** DONE CompositeView
 **** DONE ItemView
