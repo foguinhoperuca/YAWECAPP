@@ -1,22 +1,12 @@
 define([
-    'jquery'
-    , 'markup'
-		, 'marionette'
-    , 'app'
+		'marionette'
 		, 'text!../../../templates/marionette/collectionView.tpl'
-], function ($, Markup, Marionette, App, Template){
-    var CompositeView = Marionette.ItemView.extend({
+], function (Marionette, Template){
+    var CollectionView = Marionette.CollectionView.extend({
 				template: Template,
 				tagName: 'div',
-				className: 'box',
-
-				render: function() {
-						var page = Markup.up(this.template);
-						$(this.el).html(page);
-
-						return this;
-				}
+				className: 'box'
     });
 
-    return CompositeView;
+    return CollectionView;
 });

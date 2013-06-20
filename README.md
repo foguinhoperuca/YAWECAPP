@@ -1,5 +1,5 @@
 YAWECAPP
-==========
+========
 
 Yet Another WEb Client APP is a sample app for start new project with  jquery + underscore + backbone + bootstrap + markup.
 Will work with awknet-commons (java backend)
@@ -18,9 +18,7 @@ All this work is  basead in GNU GPLv3. See license file for more informartion.
 
 
 MarionetteJS
-========
-
-(PT-BR)
+============
 
 ItemView
 --------
@@ -30,23 +28,20 @@ No special problem.
 CompositeView
 -------------
 
-O maior problema com o composite view foi fazer funcionar com o item view. Foi necessário reescrever o método Marionette.Renderer.render = function(template, data) (ver app.js) para que ele retornasse somente o template. Na definição da var do template é necessário chamar a função do markup para que ela seja corretamente preenchida. A sistemática com o 
+The greatest problem with CompotiseView was integrate it with ItemView. The rewrite was necessary  (see app.js):
+
+	Marionette.Renderer.render = function(template, data) { ... };
+
+The technique using:
 
 	$(this.el).html(page);
 
-dentro do render ficou obsoleta.
+is obsolete, right now.
 
-A saber, o Marionette utiliza por padrão a sistemática de templates do requirejs. Ele espera que o template, por padrão venha "compilado" em js. Neste caso, o underscore faz o papel da engine de template. Por curiosidade, se for criado um template com o html puro e sem nenhum tab ou espaço no começo de cada linha (quebra de linha funciona normalmente - só no final da linha, lógico - e espaço na mesma linha ok) a engine padrão do Marionette renderiza. O problema disso é a perca da indentação do snippet html.
+The MarionetteJS use templates of RequireJS. The template must be "compiled" in JS and UnderscoreJS act as template engine.
+By the way, if you use a template in pure html and without spaces or tabs it can be compiled by MarionetteJS (underscore). Of course, there is a price: the snippet hasn't any indentation.
 
 CollectionView
 --------------
 
-Layout
-------
-
-TODO.
-
-Regions
--------
-
-TODO.
+Same as CompositeView. Do not need implement it!
