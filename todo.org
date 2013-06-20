@@ -5,9 +5,8 @@
 *** TODO Handlesbar
 ** MVC
 *** DONE Backbone
-*** TODO Marionette
-**** TODO Implement a layout with regions
-**** TODO CompositeView
+*** DONE Marionette
+**** DONE CompositeView
 **** DONE Migrate all app to marionette
 **** DONE Migrate Featured to marionette layout
 **** DONE Migrate generic to receive in url the template
@@ -18,7 +17,7 @@
 ** Build Tool
 *** TODO grunt
 *** TODO AMD
-*** scaffoldr (@victorwpbastos)
+*** TODO scaffoldr (@victorwpbastos)
 ** Package Manager
 *** DONE requirejs
 *** TODO bower
