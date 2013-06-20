@@ -45,6 +45,7 @@ RequireJS
 =========
 
 RequireJS use main.js file to configure all libs that will be used in app and a special method to start app. All js file need use
+
 	define([
 		'marionette'
 		, 'app'
