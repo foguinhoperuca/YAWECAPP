@@ -67,6 +67,14 @@
 						</li>
 					</ul>
 				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Handlebars <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li class="dropdown"><a href="#login">helper</a></li>
+					</ul>
+				</li>
 				<li>
 					<a href="#about">About</a>
 				</li>

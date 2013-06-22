@@ -1,11 +1,11 @@
 define([
 		'jquery'
-		, 'markup'
 		, 'bootstrap'
 		, 'backbone'
 		, 'marionette'
 		, 'config'
-], function ($, Markup, Bootstrap, Backbone, Marionette, Config){
+		, 'handlebars'
+], function ($, Bootstrap, Backbone, Marionette, Config, Handlebars){
 		var App = new Marionette.Application();
 
 		// FIXME Bootstrap var is in memory but i cant access it!
@@ -17,7 +17,10 @@ define([
 		});
 
 		Marionette.Renderer.render = function(template, data) {
-				return Markup.up(template, data);
+				var compiled = Handlebars.compile(template);
+				return compiled(data);
+
+				// return Markup.up(template, data);
 		};
 
 		// TODO implement all, except generic, to use marionette

@@ -7,6 +7,7 @@ require.config({
 				'markup': 'libs/markup-min',
 				'bootstrap': 'libs/bootstrap-min',
 				'marionette': 'libs/backbone.marionette-min',
+				'handlebars': 'libs/handlebars',
 
 				// RequireJS
 				'text': 'libs/text',
@@ -44,6 +45,9 @@ require.config({
 				'marionette': {
 						deps: ['jquery', 'underscore', 'backbone'],
 						exports: 'Marionette'
+				},
+				'handlebars': {
+						exports: 'Handlebars'
 				},
 
 				// RequireJS
