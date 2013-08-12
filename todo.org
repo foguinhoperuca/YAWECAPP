@@ -1,0 +1,67 @@
+* templates
+** TODO fork yawecapp and commit code
+*** TODO Handlesbar
+*** DONE diffs
+**** DONE yawecapp/package.json
+**** DONE LICENSE
+**** DONE README.md
+**** DONE todo.org
+**** DONE Somente em root/: .bowerrc
+**** DONE Somente em /home/jecampos/universal/personal/yawecapp/code/: .git
+**** DONE Somente em root/: .jshintrc
+**** DONE Subdiretórios idênticos: root/app e /home/jecampos/universal/personal/yawecapp/code/app
+**** DONE somente em root/: bower.json
+**** DONE Somente em root/: Gruntfile.js
+** TODO Merge README file
+*** TODO FIX description of folder layout
+*** DONE Merge with README file of YAWECAPP
+** TODO create template for tests
+** TODO Template of files that is not in under root
+*** TODO apache vhost
+*** TODO create a exemple of defaults.json
+** TODO Fix paths in js files
+** DONE ignore files
+** DONE License MIT
+** DONE migrate root/lib folder
+*** DONE Merge root/.jshintrc with root/lib/.jshintrc
+** DONE use bower
+** DONE todo.org in app
+* TODO Implement new frameworks/modern development workflow
+** template
+*** DONE Mustache
+*** DONE Markup
+*** TODO Handlesbar
+** MVC
+*** DONE Backbone
+*** DONE Marionette
+**** DONE CompositeView
+**** DONE Migrate all app to marionette
+**** DONE Migrate Featured to marionette layout
+**** DONE Migrate generic to receive in url the template
+**** DONE CompositeView
+**** DONE ItemView
+*** TODO Emberjs
+*** TODO Angularjs
+** Build Tool
+*** TODO grunt
+*** TODO AMD
+*** TODO scaffoldr (@victorwpbastos)
+** Package Manager
+*** DONE requirejs
+*** TODO bower
+*** TODO brunch.io
+*** TODO jamjs
+*** TODO yeoman
+**** yo
+**** grunt
+**** bower
+** Test
+*** TODO jasmin
+* TODO Funcionality
+** User
+*** login
+*** logout
+*** is logged?
+*** has permission?
+** Backend
+*** migrate awknet-commons arch
