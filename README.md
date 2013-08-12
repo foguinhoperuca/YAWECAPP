@@ -85,3 +85,17 @@ CollectionView
 --------------
 
 Same as CompositeView. Do not need implement it!
+
+Handlebars
+==========
+
+Rewrite the function Marionette.Renderer.render to:
+
+```
+Marionette.Renderer.render = function(template, data) {
+	var compiled = Handlebars.compile(template);
+	return compiled(data);
+};
+```
+
+Handlebars need compile the template and then insert the data.
