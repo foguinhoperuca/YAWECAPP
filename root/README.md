@@ -1,101 +1,57 @@
-YAWECAPP
-========
+# {%= name %}
 
-Yet Another WEb Client APP is a sample app for start new project with  jquery + underscore + backbone + bootstrap + markup.
-Will work with awknet-commons (java backend)
+{%= description %}
 
-Developer: Jefferson Campos - @foguinhoperuca
+## Getting Started
+### On the server
+Install the module with: `npm install {%= name %}`
 
-Previous Work
-=============
-
-This work is basead on JUMBABOOM (Jquery + UNderscore + BAckbone + BOOtstrap + Markup = JUNBABOOM! ), developed by @victorwpbastos.
-
-License
-=======
-
-All this work is  basead in GNU GPLv3. See license file for more informartion.
-
-Folders Layout
-==============
-
-All files of app are in app folder.
-
-	repos root
-	|
-	|-- app/ - all app files are here.
-	|---- css - css files. No big deal;
-	|---- data - .json files that is used as test for model/collection communication with backend;
-	|---- img - all image files. No big deal;
-	|---- js - the heart of app. All scripts are here;
-	|------ collections - contain all BackboneJS collections;
-	|------ controllers - contain all BackboneJS routers. They act like as "controller" in MVC model;
-	|------ libs - all static libs of third-party;
-	|------ models - contain all backbone models;
-	|------ views - contain all BackboneJS and MarionetteJS views;
-	|------ app.js - main file of app. Act as main function in C, Java, etc;
-	|------ config.js - contain all configuration of app (backend url, etc);
-	|------ main.js - used by RequireJS to start app. Contain the first method called by require, instanciate all routers and start BackboneJS;
-	|---- templates - all html snippets live here. The template engine use theses files;
-	|-- index.html - main html file of app. All files will be rendered here;
-	|-- package.json - bower (future);
-	|-- todo.org - all tasks to work;
-
-RequireJS
-=========
-
-RequireJS use main.js file to configure all libs that will be used in app and a special method to start app. All js file need use
-
-	define([
-		'marionette'
-		, 'app'
-		, 'text!../../templates/about.tpl'
-		], function (Marionette, App, Template)  {
-
-(Of course, replace libs for appropriate ones)
-
-And that's it. Simple to use it. ;)
-
-
-MarionetteJS
-============
-
-ItemView
---------
-
-No special problem.
-
-CompositeView
--------------
-
-The greatest problem with CompotiseView was integrate it with ItemView. The rewrite was necessary  (see app.js):
-
-	Marionette.Renderer.render = function(template, data) { ... };
-
-The technique using:
-
-	$(this.el).html(page);
-
-is obsolete, right now.
-
-The MarionetteJS use templates of RequireJS. The template must be "compiled" in JS and UnderscoreJS act as template engine.
-By the way, if you use a template in pure html and without spaces or tabs it can be compiled by MarionetteJS (underscore). Of course, there is a price: the snippet hasn't any indentation.
-
-CollectionView
---------------
-
-Same as CompositeView. Do not need implement it!
-
-Handlebars
-==========
-
-Rewrite the function Marionette.Renderer.render to:
-
-```
-Marionette.Renderer.render = function(template, data) {
-	var compiled = Handlebars.compile(template);
-	return compiled(data);
-};
+```javascript
+var {%= js_safe_name %} = require('{%= name %}');
+{%= js_safe_name %}.awesome(); // "awesome"
 ```
 
-Handlebars need compile the template and then insert the data.
+### In the browser
+Download the [production version][min] or the [development version][max].
+
+[min]: https://raw.github.com/{%= git_user %}/{%= git_repo %}/master/dist/{%= name %}.min.js
+[max]: https://raw.github.com/{%= git_user %}/{%= git_repo %}/master/dist/{%= name %}.js
+
+In your web page:
+
+```html
+<script src="dist/{%= name %}.min.js"></script>
+<script>
+awesome(); // "awesome"
+</script>
+```
+
+In your code, you can attach {%= name %}'s methods to any object.
+
+```html
+<script>
+var exports = Bocoup.utils;
+</script>
+<script src="dist/{%= name %}.min.js"></script>
+<script>
+Bocoup.utils.awesome(); // "awesome"
+</script>
+```
+
+## Documentation
+_(Coming soon)_
+
+## Examples
+_(Coming soon)_
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+_Also, please don't edit files in the "dist" subdirectory as they are generated via Grunt. You'll find source code in the "lib" subdirectory!_
+
+## Release History
+_(Nothing yet)_
+
+## License
+Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}  
+Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
