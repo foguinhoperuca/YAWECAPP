@@ -1,15 +1,15 @@
 require.config({
 		paths: {
 				// LIBS
-				'underscore': 'libs/underscore-min',
-				'jquery': 'libs/jquery-min',
-				'backbone': 'libs/backbone-min',
-				'bootstrap': 'libs/bootstrap-min',
-				'marionette': 'libs/backbone.marionette-min',
-				'handlebars': 'libs/handlebars',
+				'underscore': 'libs/vendor/underscore-min',
+				'jquery': 'libs/vendor/jquery-min',
+				'backbone': 'libs/vendor/backbone-min',
+				'bootstrap': 'libs/vendor/bootstrap-min',
+				'marionette': 'libs/vendor/backbone.marionette-min',
+				'handlebars': 'libs/vendor/handlebars',
 
 				// RequireJS
-				'text': 'libs/text',
+				'text': 'libs/vendor/text',
 
 				// App modules
 				'config': 'config',

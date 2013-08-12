@@ -1,5 +1,6 @@
 * TODO templates
 ** TODO Fix paths in js files
+** TODO Fix images EOF
 ** DONE Template of files that is not in under root
 *** DONE apache vhost
 *** DONE create a exemple of defaults.json
