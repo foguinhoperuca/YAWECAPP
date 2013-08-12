@@ -1,9 +1,9 @@
 /*
- * grunt-init-yawecapp
- * https://gruntjs.com/
+ * yawecapp
+ * https://yawecapp.awknet.org/
  *
  * Copyright (c) 2013 Jefferosn Campos, contributors
- * Licensed under the GPLv3 license.
+ * Licensed under the MIT license.
  */
 
 'use strict';
@@ -78,5 +78,4 @@ exports.template = function(grunt, init, done) {
 				// All done!
 				done();
 		});
-
 };

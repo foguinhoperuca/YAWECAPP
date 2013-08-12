@@ -1,6 +1,14 @@
-* templates
-** TODO fork yawecapp and commit code
-*** TODO Handlesbar
+* TODO templates
+** TODO Merge README file
+*** TODO FIX description of folder layout
+*** DONE Merge with README file of YAWECAPP
+** TODO create template for tests
+** TODO Template of files that is not in under root
+*** TODO apache vhost
+*** TODO create a exemple of defaults.json
+** TODO Fix paths in js files
+** DONE fork yawecapp and commit code
+*** DONE Handlesbar
 *** DONE diffs
 **** DONE yawecapp/package.json
 **** DONE LICENSE
@@ -12,14 +20,6 @@
 **** DONE Subdiretórios idênticos: root/app e /home/jecampos/universal/personal/yawecapp/code/app
 **** DONE somente em root/: bower.json
 **** DONE Somente em root/: Gruntfile.js
-** TODO Merge README file
-*** TODO FIX description of folder layout
-*** DONE Merge with README file of YAWECAPP
-** TODO create template for tests
-** TODO Template of files that is not in under root
-*** TODO apache vhost
-*** TODO create a exemple of defaults.json
-** TODO Fix paths in js files
 ** DONE ignore files
 ** DONE License MIT
 ** DONE migrate root/lib folder

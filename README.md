@@ -1,6 +1,6 @@
-# grunt-init-yawecaap
+# YAWECAPP
 
-> Yet Another WEb Client APP is a sample app for start new project with  jquery + underscore + backbone + bootstrap + markup. . Will work with awknet-commons (java backend). You can create it using [grunt-init][].
+> Yet Another WEb Client APP is a sample app for start new project with  jquery + underscore + backbone + bootstrap + handlebars. Will work with awknet-commons (java backend). You can create it using [grunt-init][].
 
 [grunt-init]: http://gruntjs.com/project-scaffolding
 
@@ -93,9 +93,9 @@ Same as CompositeView. Do not need implement it!
 # Credits
 
 Copyright (c) 2013 Jefferson Campos - @foguinhoperuca. Licensed under the GPLv3 license.
-YAWECAPP is basead on JUMBABOOM (Jquery + UNderscore + BAckbone + BOOtstrap + Markup = JUNBABOOM! ), developed by @victorwpbastos.
+YAWECAPP is basead on JUMBABOOM (Jquery + UNderscore + BAckbone + BOOtstrap + Markup = JUNBABOOM! ), developed by @victorwpbastos (there is some changes in libraries used, like Handlebarsjs instead Markupjs).
 Basead in project grunt-commonjs (https://npmjs.org/package/grunt-commonjs).
 
 # License
 
-All this work is  basead in GNU GPLv3. See License file for more informartion.
+All this work use MIT license. See License file for more informartion.
