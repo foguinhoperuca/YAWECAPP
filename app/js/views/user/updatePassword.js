@@ -1,10 +1,9 @@
 define([
     'jquery'
     , 'backbone'
-    , 'markup'
     ,'app'
     , 'models/user'
-], function ($, Backbone, Mark, App, UserModel){
+], function ($, Backbone, App, UserModel){
     var PasswordView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'box',

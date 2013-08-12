@@ -1,11 +1,10 @@
 define([
 		'jquery'
-		, 'markup'
 		, 'marionette'
 		, 'app'
 		, 'text!../../../templates/marionette/itemView.tpl'
 		, 'models/meme'
-], function ($, Markup, Marionette, App, ItemViewTemplate, MemeModel){
+], function ($, Marionette, App, ItemViewTemplate, MemeModel){
 		var ItemView = Marionette.ItemView.extend({
 				template: ItemViewTemplate,
 				tagName: 'div',

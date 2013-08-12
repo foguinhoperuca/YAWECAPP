@@ -4,7 +4,6 @@ require.config({
 				'underscore': 'libs/underscore-min',
 				'jquery': 'libs/jquery-min',
 				'backbone': 'libs/backbone-min',
-				'markup': 'libs/markup-min',
 				'bootstrap': 'libs/bootstrap-min',
 				'marionette': 'libs/backbone.marionette-min',
 				'handlebars': 'libs/handlebars',
@@ -20,10 +19,6 @@ require.config({
 				'AboutView': 'views/featured'
 		},
 		shim: {
-				// 'handlebars': {
-				//		exports: 'Handlebars'
-				// },
-
 				// LIBS
 				'jquery': {
 						exports: '$'
@@ -31,9 +26,6 @@ require.config({
 				'bootstrap': {
 						deps: ['jquery'],
 						exports : 'bootstrap'
-				},
-				'markup': {
-						exports: 'Mark'
 				},
 				'underscore': {
 						exports: '_'

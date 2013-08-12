@@ -19,8 +19,6 @@ define([
 		Marionette.Renderer.render = function(template, data) {
 				var compiled = Handlebars.compile(template);
 				return compiled(data);
-
-				// return Markup.up(template, data);
 		};
 
 		// TODO implement all, except generic, to use marionette
