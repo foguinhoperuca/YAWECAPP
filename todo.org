@@ -1,6 +1,8 @@
-* TODO templates
-** TODO Fix paths in js files
-** TODO Fix images EOF
+* DONE templates
+** DONE Fix images
+*** DONE Fix parse of image when "scaffolder" it
+*** DONE Fix EOF
+** DONE Fix paths in js files
 ** DONE Template of files that is not in under root
 *** DONE apache vhost
 *** DONE create a exemple of defaults.json

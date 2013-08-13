@@ -10,7 +10,7 @@
 		<ul class="nav">
 			<a href="#">
 				<li>
-					<img src="app/img/backup.png" id="yawecapp_logo" width="40px">
+					<img src="app/img/logo.png" id="yawecapp_logo" width="40px">
 				</li>
 			</a>
 		</ul>

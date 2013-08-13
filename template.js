@@ -63,6 +63,9 @@ exports.template = function(grunt, init, done) {
 						'grunt-contrib-watch': '~0.4.0'
 				};
 
+				// Options for correct copy of images
+				var options = {noProcess: 'app/img/**'};
+
 				// Files to copy (and process).
 				var files = init.filesToCopy(props);
 
@@ -70,7 +73,7 @@ exports.template = function(grunt, init, done) {
 				init.addLicenseFiles(files, props.licenses);
 
 				// Actually copy (and process) files.
-				init.copyAndProcess(files, props);
+				init.copyAndProcess(files, props, options);
 
 				// Generate package.json file.
 				init.writePackageJSON('package.json', props);
