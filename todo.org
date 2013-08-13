@@ -1,33 +1,3 @@
-* DONE templates
-** DONE Fix images
-*** DONE Fix parse of image when "scaffolder" it
-*** DONE Fix EOF
-** DONE Fix paths in js files
-** DONE Template of files that is not in under root
-*** DONE apache vhost
-*** DONE create a exemple of defaults.json
-** DONE Merge README file
-*** DONE FIX description of folder layout
-*** DONE Merge with README file of YAWECAPP
-** DONE fork yawecapp and commit code
-*** DONE Handlesbar
-*** DONE diffs
-**** DONE yawecapp/package.json
-**** DONE LICENSE
-**** DONE README.md
-**** DONE todo.org
-**** DONE Somente em root/: .bowerrc
-**** DONE Somente em /home/jecampos/universal/personal/yawecapp/code/: .git
-**** DONE Somente em root/: .jshintrc
-**** DONE Subdiretórios idênticos: root/app e /home/jecampos/universal/personal/yawecapp/code/app
-**** DONE somente em root/: bower.json
-**** DONE Somente em root/: Gruntfile.js
-** DONE ignore files
-** DONE License MIT
-** DONE migrate root/lib folder
-*** DONE Merge root/.jshintrc with root/lib/.jshintrc
-** DONE use bower
-** DONE todo.org in app
 * TODO Implement new frameworks/modern development workflow
 ** DONE template
 *** DONE Mustache
